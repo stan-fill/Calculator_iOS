@@ -1,0 +1,147 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+.calculator {
+    display: flex;
+    height: 100%;
+    align-items: end;
+    padding-bottom: 15px;
+}
+.container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+button {
+    padding: 0;
+}
+.result {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 14.56px;
+    margin-bottom: 10px;
+}
+.result span {
+    display: block;
+    color: white;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(60px, 84.75px));
+    grid-template-rows: repeat(5, minmax(60px, 84.75px));
+    gap: 15px;
+    /* align-items: end; */
+    width: 100%;
+    height: 100%;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    border: 0;
+}
+.button span {
+    display: block;
+    line-height: 100%;
+    font-size: 70px;
+    font-family: Arial, Helvetica;
+}
+.numbers {
+    transition: all 0.09s 0.09s;
+}
+.numbers:active {
+    background-color: #5f5b5f;
+    transition: 0.09s;
+}
+.comma {
+    transform: rotate(-9deg);
+}
+.ac, .negative, .percent {
+    background-color: #a5a5a5;
+    font-size: 30px;
+    transition: all 0.09s 0.09s;
+}
+.minus::after {
+    content: '';
+    position: absolute;
+    transform: translateY(50%);
+    border-bottom: 4px solid #ffffff;
+    width: 20px;
+    transition: all 0.4s;
+}
+.sign {
+    background-color: #ff9e0b;
+    color: #ffffff;
+    fill: #ffffff;
+    transition: all 0.4s;
+}
+.sign:hover {
+    color: #ff9e0b;
+    fill: #ff9e0b;
+    background-color: #ffffff;
+}
+.minus:hover::after {
+    border-bottom: 4px solid #ff9e0b;
+}
+.numbers, .dot {
+    background-color: #333333;
+    color: #ffffff;
+}
+.ac:active, .negative:active, .percent:active {
+    background-color: #d6d6d6;
+    transition: all 0.09s;
+}
+.equal {
+    background-color: #ff9e0b;
+    color: #ffffff;
+    transition: all 0.09s 0.09s;
+}
+.equal:active {
+    color: #ff9e0b;
+    background-color: #ffffff;
+    transition: all 0.09s;
+}
+.zero {
+    width: 100%;
+    border-radius: 135px;
+    grid-column: span 2;
+    justify-content: start;
+    padding-left: 31.125px;
+    max-height: 84px;
+}
+.minus {
+    position: relative;
+}
+@media (max-width: 394px) {
+    .button {
+        font-size: 35px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, minmax(60px, 80px));
+        grid-template-rows: repeat(5, minmax(60px, 80px));
+        justify-content: center;
+    }
+    .ac, .negative, .percent {
+        font-size: 30px;
+    }
+}
