@@ -69,9 +69,12 @@ button {
 .numbers {
     transition: all 0.09s 0.09s;
 }
-.numbers:active {
+.numbers:active, .dot:active {
     background-color: #5f5b5f;
     transition: 0.09s;
+}
+.dot {
+    transition: all 0.09s 0.09s;
 }
 .comma {
     transform: rotate(-9deg);
