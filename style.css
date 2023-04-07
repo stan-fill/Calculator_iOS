@@ -80,6 +80,7 @@ button {
     transform: rotate(-9deg);
 }
 .ac, .negative, .percent {
+    color: #000000;
     background-color: #a5a5a5;
     font-size: 30px;
     transition: all 0.09s 0.09s;
